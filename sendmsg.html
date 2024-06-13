@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="std.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("headstd.html");
+      });
+    </script>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3>Send Message</h3>
+<br>
+    <form id="form1">
+      <label>Your Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label>Your Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label>Message:</label>
+      <textarea id="message" name="message" rows="4" cols="30" required></textarea><br /><br />
+
+      <button id="btn5" value="submit" type="submit" onclick="sendMessage()">Send</button>
+    </form>
+    <script>
+      function sendMessage() {
+          // Get the values from the input fields
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          // Perform any validation or data manipulation as needed
+          
+          // Display the message
+          var result = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+          alert(result);
+          
+         
+         
+          console.log(result)
+      }
+  </script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="send.js"></script>
+  </body>
+  </html>

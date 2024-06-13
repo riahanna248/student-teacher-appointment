@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teacher.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+  
+      <script>
+        $(document).ready(function () {
+          $("#header").load("headteacher.html");
+        });
+    
+      </script>
+    <br>
+    <br>
+    <br>
+    <div class="appointmentform">
+        <div id="book-appointment">
+            <h2 style="color: bisque;">Schedule Appointment</h2>
+            <form id="book-appointment-form" style="color:white; font-size: 20px;">
+                <label for="teacher">Teacher:</label>
+                <select name="teacher" id="teacher">
+                    <option value="">Select a teacher</option>
+                    <option value="teacher1">Shaggy</option>
+                    <option value="teacher2">Shreya</option>
+                    <option value="teacher3">Teena</option>
+                    <option value="teacher4">Shyam</option>
+                    <option value="teacher5">salma</option>
+                </select>
+<br>
+
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date"  required/><br>
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time" required />
+
+                
+            </form>
+            <br>
+            <button type="submit">Schedule Appointment</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+   
+    <div id="footer"></div>
+</body>
+
+</html>

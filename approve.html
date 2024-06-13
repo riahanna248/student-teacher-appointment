@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Approval</title>
+    <link rel="stylesheet" href="add.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            width: 100%;
+            background-image: url("assets/images/2149044935.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 18px;
+        }
+        th {
+            font-size: 20px;
+            font-weight: 600;  
+            background-color: #f4f4f4;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        h3 {
+            text-align: left;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            color: wheat;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            cursor: pointer;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            color: white;
+            background-color: dodgerblue;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        $(document).ready(function(){
+            $("#header").load("headerfile.html");
+        });
+    </script>
+    <div class="container">
+        <form>
+            <h3>Student Approval</h3>
+            <table>
+                <tr>
+                    <th>Full name</th>
+                    <th>School Name</th>
+                    <th>Place</th>
+                    <th>Email</th>
+                    <th>Status Success</th>
+                    <th>Status Failed</th>
+                </tr>
+                <tr>
+                    <td>Somesh Dhar</td>
+                    <td>Shivaji school</td>
+                    <td>Pelam</td>
+                    <td>someshdhar22@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Aishwarya Rane</td>
+                    <td>New English School</td>
+                    <td>Thane</td>
+                    <td>aishwaryarane85@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Vijay</td>
+                    <td>Nalanda Public School</td>
+                    <td>Coloba</td>
+                    <td>tvinod@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Ajay Gouda</td>
+                    <td>Anchor English School</td>
+                    <td>Polem</td>
+                    <td>ajaygouda88@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Shirish Patel</td>
+                    <td>T.F International School</td>
+                    <td>Cancona</td>
+                    <td>patelshirish0@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Bharat Desai</td>
+                    <td>Little Blooming School</td>
+                    <td>Margao</td>
+                    <td>bharatdesai@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Prachi Sawant</td>
+                    <td>Kendriya Vidyalaya School</td>
+                    <td>Sawantwada</td>
+                    <td>prachisawant9@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+                <tr>
+                    <td>Shaikh Nooren</td>
+                    <td>Tree House High School</td>
+                    <td>Panjim</td>
+                    <td>noorenshaikh893@gmail.com</td>
+                    <td><button type="button">Approved</button></td>
+                    <td><button type="button">Reject</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

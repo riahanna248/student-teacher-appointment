@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="add.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th {
+            font-size: 20px;
+            color: blue;
+            background-color: #f4f4f4;
+        }
+        td {
+            font-size: 18px;
+            background-color: #fff;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-image: url("assets/images/2149044935.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px;
+            width: auto;
+            border: 1px solid #333;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #contactForm {
+            font-size: 20px;
+            color: white;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        label, input {
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input:hover {
+            border: 2px solid darkgreen;
+            transition: border-color 0.3s ease-in-out;
+        }
+        #click {
+            cursor: pointer;
+            width: 100px;
+            height: auto;
+            text-align: center;
+            color: aliceblue;
+            background-color: dodgerblue;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #click:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("headerfile.html");
+        });
+    </script>
+    <h2>Add Teacher</h2>
+    <div class="container">
+        <form id="contactForm" action="" method="get">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" id="name" required /></td>
+                </tr>
+                <tr>
+                    <th>Department</th>
+                    <td><input type="text" id="dept" required /></td>
+                </tr>
+                <tr>
+                    <th>Subject</th>
+                    <td><input type="text" id="subject" required /></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" id="email" required /></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password" id="password" required /></td>
+                </tr>
+            </table>
+            <button id="click" type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="add.js"></script>
+</body>
+</html>

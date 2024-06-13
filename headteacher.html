@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #headerfile{
+       background-color:  rgb(94, 226, 68);
+       border: 2px solid black;
+           padding: 20px;
+       float: right;
+       width: 100%;
+       position: fixed;
+   }
+   #headerfile a{
+      
+    padding: 10px;
+       font-size: 20px;
+       text-decoration: none;
+   }
+
+   .logoutbtn{
+    float: right;
+    background-color:rgb(94, 226, 68);
+    color: black;
+    width: 80px;
+    font-size: 20px;
+
+   }
+
+  
+</style>
+<body>
+    <div id="header">
+        <div id="headerfile">
+            <a href="scheduleapp.html">Schedule Appointment</a>
+            <a href="approvecancel.html">Approve or cancel</a>
+             <a href="viewallappointment.html">View all appointment</a>
+             <a href="viewmsg.html">View Message</a>
+            
+             <button class="logoutbtn">signout</button>
+        </div>
+
+   
+
+</div>
+<br>
+<script src="logout.js"></script>
+    const logoutbtn = document.querySelector(".logoutbtn")
+logoutbtn.addEventListener("click",() =>{
+    window.location.replace("login.html")
+});
+</script>
+</body>
+</html>

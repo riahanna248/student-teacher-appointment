@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="std.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <h2>Search Teacher</h2>
+  <div id="root"></div>
+
+  <script>
+    $(document).ready(function () {
+      $("#header").load("headstd.html");
+    });
+
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "stappointment-ef58b.firebaseapp.com",
+      databaseURL: "https://stappointment-2c481-default-rtdb.firebaseio.com",
+      projectId: "stappointment-ef58b",
+      storageBucket: "stappointment-ef58b.appspot.com",
+      messagingSenderId: "487079756801",
+      appId: "1:487079756801:web:95cd6530339b3b8b302c00"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Reference message collections
+    var messagesRef = firebase.database().ref("teachers");
+
+    messagesRef.on("value", function (snapshot) {
+      var teachersHtml = "";
+      snapshot.forEach(function (element) {
+        teachersHtml += `<div>Name of the teacher: ${element.val().name}</div>`;
+        teachersHtml += `<div>Department: ${element.val().dept}</div>`;
+        teachersHtml += `<div>Subject: ${element.val().subject}</div>`;
+        teachersHtml += `<div>Email: ${element.val().email}</div>`;
+        teachersHtml += `<br>`;
+      });
+      document.querySelector("#root").innerHTML = teachersHtml;
+    });
+  </script>
+</body>
+</html>

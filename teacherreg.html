@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>std reg form</title>
+    <style>
+        body{
+            background-color: pink;
+            /* background-position: left;
+            background-size: cover;
+            width: 100%; */
+        }
+        .stdreg{
+            display: block;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+          
+            width: 20rem;
+        }
+        label, input{
+             display: table-cell; 
+            margin-bottom: 10px;
+        }
+        label{
+            padding: 10px;
+        }
+        form.stdform{
+            display:table;
+            align-items: center;
+            
+        }
+      .stdreg p{
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Register</h1>
+    <form id="stdform" method="get" action="login.html"> 
+        <div class="stdreg">
+            
+                
+               
+                
+                <p><label>Name:</label>
+                    <input
+                      type="name"
+                      id="name"
+                      placeholder="Enter your User id"
+                      required
+                    /></p>
+                
+                <p>
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    id="emailstd"
+                    placeholder="Enter your User id"
+                    required
+                  />
+                </p>
+                <p>
+                  <label>Student Id:</label>
+                  <input
+                    type="uname"
+                    id="uname"
+                    placeholder="Enter your User id"
+                    required
+                  />
+                </p>
+                <p>
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </p>
+                <button id="submit">Sign In</button><br>
+
+          
+
+       
+         
+        </div>
+      </form>
+</body>
+</html>

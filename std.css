@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-image: url("assets/images/2148721266.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+div {
+    padding: 8px;
+    font-weight: 600;
+}
+
+#root {
+    padding-top: 30px;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: #f5f5f5;
+    text-align: left;
+}
+
+label, input {
+    font-size: 16px;
+}
+
+input:hover {
+    border: 2px solid darkgreen;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#book-appointment-form {
+    font-size: 24px;
+    color: darkred;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 18px;
+    color: #fff;
+    background-color: #8b0000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #a52a2a;
+}
+
+#form1 {
+    font-size: 24px;
+    color: #073943;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#btn5 {
+    font-size: 18px;
+    color: #31280f;
+    background-color: #5cd5eb;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#btn5:hover {
+    background-color: #4ac1d3;
+}
+
+h3 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}

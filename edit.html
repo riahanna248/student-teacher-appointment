@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="add.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+  --></head>
+  <body>
+    <div id="header"></div>
+   
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("headerfile.html");
+      });
+    </script>
+
+    <div id="root">
+
+
+
+
+      
+    </div>
+    
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA6NegHbC7vBSSzndltp85zkzKmMIGd1CI",
+        authDomain: "stappointment-ef58b.firebaseapp.com",
+        projectId: "stappointment-ef58b",
+        storageBucket: "stappointment-ef58b.appspot.com",
+        messagingSenderId: "487079756801",
+        appId: "1:487079756801:web:95cd6530339b3b8b302c00",
+        measurementId: "G-4M53MG0KKE"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      //reference message collections
+      var messagesRef = firebase.database().ref("stappointment-2c481");
+      messagesRef.on("value", function (snapshot) {
+        snapshot.forEach(function (element) {
+          document.querySelector("#root").innerHTML += `<div> <b>Name:</b> ${element.val().name}</div>`;
+          document.querySelector("#root").innerHTML += `<div> Department: ${element.val().dept}</div>`,
+            (document.querySelector("#root").innerHTML += `<div> Subject: ${
+              element.val().subject
+            }</div>`);
+          (document.querySelector("#root").innerHTML += `<div> Email: ${
+            element.val().email
+          }</div>`),
+            (document.querySelector("#root").innerHTML += `<div> Password: ${
+              element.val().password
+            }</div>`);
+           
+          document.querySelector(
+            "#root"
+          ).innerHTML += `<a href="update.html"><button>Update</button></a>`;
+
+          document.querySelector(
+            "#root"
+          ).innerHTML += `<button>Delete</button>` ;
+          document.querySelector(
+            "#root"
+          ).innerHTML += `<div><br></div>` ;
+        });
+     
+
+
+      
+
+    });
+    </script>
+
+   
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teacher.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("headteacher.html");
+      });
+  
+    </script>
+<br>
+<br>
+<br>
+<div id="root"></div>
+
+
+
+
+<script>
+ const firebaseConfig = {
+    apiKey: "AIzaSyB-lUkskNHowi00aEDwASAJPp8hEOHGW6M",
+    authDomain: "sendmessagest.firebaseapp.com",
+    databaseURL: "https://sendmessagest-default-rtdb.firebaseio.com",
+    projectId: "sendmessagest",
+    storageBucket: "sendmessagest.appspot.com",
+    messagingSenderId: "323382819735",
+    appId: "1:323382819735:web:e512c4019db9087af722d2"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //reference message collections
+  var messagesRef = firebase.database().ref("messages");
+  messagesRef.on("value", function (snapshot) {
+    snapshot.forEach(function (element) {
+        document.querySelector("#root").innerHTML += `<div> <b>Messages</b></div>`;
+      document.querySelector("#root").innerHTML += `<div> Name: ${element.val().name}</div>`;
+      document.querySelector("#root").innerHTML += `<div> Email: ${element.val().email}</div>`;
+        (document.querySelector("#root").innerHTML += `<div> Message: ${
+          element.val().message
+        }</div>`);
+        (document.querySelector("#root").innerHTML += `<div> <br><br></div>`);
+      console.log(element.val());
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

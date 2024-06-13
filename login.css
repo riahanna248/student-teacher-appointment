@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.adlogin, .stdlogin, .teacherlogin {
+    border: 1px solid #333;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    background-color: rgba(250, 128, 114, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.adlogin:hover, .stdlogin:hover, .teacherlogin:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    width: auto;
+    border: 1px solid #333;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 10px;
+    padding: 14px 28px;
+    width: 100%;
+    cursor: pointer;
+    background-color: dodgerblue;
+    font-size: 16px;
+    color: beige;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: deepskyblue;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    font-size: 16px;
+    color: darkblue;
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: blue;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+input {
+    border: 1px solid #333;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
